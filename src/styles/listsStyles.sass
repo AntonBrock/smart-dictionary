@@ -1,0 +1,58 @@
+.list
+  &--empty
+    font-size: 20px
+    color: #b3b3b3
+    cursor: default
+.word 
+  display: flex
+  align-items: center
+  padding-left: 10px
+  background: #ffffff
+  margin-bottom: 10px
+  min-height: 35px
+  border-radius: 5px
+  &__container
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    width: 95%
+    min-height: 35px
+    transition: all .4s
+    &--open
+      min-height: 150px
+      padding-top: 10px
+  &__buttonStart
+    width: 5%
+    & > button
+      border: none
+      background: white
+      cursor: pointer
+      outline: none
+.container
+  &__mainInformation
+    display: flex
+    width: 100%
+    padding-top: 10px
+  &__moreInformation
+    width: 100% 
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    border-top: 2px solid #e6e6e6
+    padding-top: 10px
+    margin-top: 5px 
+  &__title
+    font-weight: bold
+    font-size: 19px
+    margin-right: 20px
+    cursor: pointer
+  &__part
+    font-style: italic
+    cursor: default
+    margin-right: 20px
+  &__definition
+    max-width: 100%;
+    cursor: default
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
