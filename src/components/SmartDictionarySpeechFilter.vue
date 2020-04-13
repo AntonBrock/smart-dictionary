@@ -2,10 +2,13 @@
   <div class="speechFilter">
     <div v-for="(item, index) in partOfSpeechList" :key="item + index">
       <label 
-          @change="activeSpeechFilter(item)"
           class="speechFilter__checkBox checkBox"
-      > {{item}}
-        <input type="checkbox">
+      > {{item.partOfSpeech}}
+        <input 
+          @change="activeSpeechFilter(item)"
+          type="checkbox"
+          v-model="item.checked"
+        >
         <span class="checkmark"></span>
       </label>
     </div>
@@ -24,13 +27,18 @@
       ...mapGetters('data', ['getPartOfSpeechList']),
       partOfSpeechList() {
         if(this.getPartOfSpeechList) {
-          return this.getPartOfSpeechList
+          // this.getPartOfSpeechList
+          return []
         } else { return [] }
       }
     },
     methods: {
       activeSpeechFilter(item) {
-        this.$store.commit("data/activeSpeechFilter", item)
+        if(item.checked) {
+          this.$store.commit("data/activeSpeechFilter", item.partOfSpeech)
+        } else {
+          this.$store.commit("data/activeSpeechFilter", null)
+        }
       }
     }
   }

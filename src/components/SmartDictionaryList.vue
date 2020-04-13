@@ -98,6 +98,7 @@
         this.$store.commit("data/setStarredWord", obj)
       },
       unStarred(item) {
+        item.starred = false
         this.$store.commit("data/unSetStarredWord", item)
       },
       wantToShowMore(item) {
