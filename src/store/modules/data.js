@@ -10,18 +10,15 @@ const state = {
 const getters = {
   getAllSearchList(state) {
     return state.searchingList
-    // let filteredArray = currentArray.filter(el => {
-    //   const duplicate = seen.has(el.word)
-    //   seen.add(el.word)
-    //   return !duplicate
-    // });
-    // return filteredArray
   },
   getStarredList(state) {
-    // state.starredList.filter(el => { 
-    //   let filterResults = state.fillterBar.map(value => {el.includes(value)})
-    //   return filterResults.find(false) == undefined
-    // })
+    // I try to do it T_T
+    /* 
+      state.starredList.filter(el => { 
+        let filterResults = state.fillterBar.map(value => {el.includes(value)})
+        return filterResults.find(false) == undefined
+      }) 
+    */
     return state.starredList
   },
   getPartOfSpeechList(state) {
