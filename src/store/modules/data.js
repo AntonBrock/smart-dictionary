@@ -9,7 +9,7 @@ const state = {
   
 const getters = {
   getAllSearchList(state) {
-    return state.searchingList
+    return state.searchingList.sort((a,b) => (a.word > b.word) ? 1 : ((b.word > a.word) ? -1 : 0))
   },
   getStarredList(state) {
     // I try to do it T_T
